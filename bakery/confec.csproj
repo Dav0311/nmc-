@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2526E6DC-AF4D-4DC4-B0A8-A191260168C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>bakery</RootNamespace>
+    <AssemblyName>bakery</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\nmc\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\bakery.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\categoryBLL.cs" />
+    <Compile Include="BLL\customerBLL.cs" />
+    <Compile Include="BLL\expenseBLL.cs" />
+    <Compile Include="BLL\loginBLL.cs" />
+    <Compile Include="BLL\patientBLL.cs" />
+    <Compile Include="BLL\productBLL.cs" />
+    <Compile Include="BLL\saledetailsBLL.cs" />
+    <Compile Include="BLL\salesBLL.cs" />
+    <Compile Include="BLL\userBLL.cs" />
+    <Compile Include="DAL\categoryDAL.cs" />
+    <Compile Include="DAL\customerDAL.cs" />
+    <Compile Include="DAL\expenseDAL.cs" />
+    <Compile Include="DAL\loginDAL.cs" />
+    <Compile Include="DAL\patientDAL.cs" />
+    <Compile Include="DAL\productDAL.cs" />
+    <Compile Include="DAL\saledetailsDAL.cs" />
+    <Compile Include="DAL\salesDAL.cs" />
+    <Compile Include="DAL\userDAL.cs" />
+    <Compile Include="ui\adminUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\adminUI.Designer.cs">
+      <DependentUpon>adminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\categoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\categoryUI.Designer.cs">
+      <DependentUpon>categoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\crysreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crysreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ui\customerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\customerUI.Designer.cs">
+      <DependentUpon>customerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ui\detailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>detailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ui\DetailsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ui\expenseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\expenseUI.Designer.cs">
+      <DependentUpon>expenseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ui\loginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\loginUI.Designer.cs">
+      <DependentUpon>loginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\patientsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\patientsUI.Designer.cs">
+      <DependentUpon>patientsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\productUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\productUI.Designer.cs">
+      <DependentUpon>productUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\receipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>receipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ui\report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\salesDetailsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\salesDetailsUI.Designer.cs">
+      <DependentUpon>salesDetailsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\salesMade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\salesMade.Designer.cs">
+      <DependentUpon>salesMade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\salesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLL\salesUI.Designer.cs">
+      <DependentUpon>salesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\userDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\userDash.Designer.cs">
+      <DependentUpon>userDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\usersUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\usersUI.Designer.cs">
+      <DependentUpon>usersUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ui\adminUI.resx">
+      <DependentUpon>adminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui\categoryUI.resx">
+      <DependentUpon>categoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\crysreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crysreport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\customerUI.resx">
+      <DependentUpon>customerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\DetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DetailsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\expenseUI.resx">
+      <DependentUpon>expenseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\loginUI.resx">
+      <DependentUpon>loginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\patientsUI.resx">
+      <DependentUpon>patientsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\productUI.resx">
+      <DependentUpon>productUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\receipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>receipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\salesDetailsUI.resx">
+      <DependentUpon>salesDetailsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\salesMade.resx">
+      <DependentUpon>salesMade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BLL\salesUI.resx">
+      <DependentUpon>salesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\userDash.resx">
+      <DependentUpon>userDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\usersUI.resx">
+      <DependentUpon>usersUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ui\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ui\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ui\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ui\detailDataSet.xsc">
+      <DependentUpon>detailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ui\detailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>detailDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ui\detailDataSet.xss">
+      <DependentUpon>detailDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
